@@ -2,6 +2,10 @@
 
 Front-end codebase skills of one-piece
 
+[![Build Status](https://travis-ci.org/joshuaalpuerto/one-piece-skills.svg?branch=master)](https://travis-ci.org/joshuaalpuerto/one-piece-skills)
+[![Coverage Status](https://coveralls.io/repos/github/joshuaalpuerto/one-piece-skills/badge.svg?branch=master)](https://coveralls.io/github/joshuaalpuerto/one-piece-skills?branch=master)
+![Dependecies](https://david-dm.org/joshuaalpuerto/one-piece-skills/status.svg)
+![Dev Dependecies](https://david-dm.org/joshuaalpuerto/one-piece-skills/dev-status.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Development Environment Setup

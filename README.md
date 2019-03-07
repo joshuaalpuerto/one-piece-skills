@@ -134,3 +134,12 @@ via a temporary URL: great for testing on different devices, client demos, etc!
 
 Unit tests live in `test/` directories right next to the components being tested
 and are run with `npm run test`.
+
+### Pre-commit
+
+Adding `pre-commit` to your project can be helpful to encourage consistency and quality of your code repository.
+
+- [pre-commit](https://github.com/observing/pre-commit) - **pre-commit** is a pre-commit hook installer for `git`. It will ensure that your `npm test` (or other specified scripts) passes before you can commit your changes. This all conveniently configured in your `package.json`.
+- [lint-staged](https://github.com/okonet/lint-staged) - Linting makes more sense when running before committing your code. By doing that you can ensure no errors are going into repository and enforce code style. But running a lint process on a whole project is slow and linting results can be irrelevant. Ultimately you only want to lint files that will be committed.
+
+> If `pre-commit` isn't triggering it means you install the package with out having `.git` instance. You need to remove `node_modules` and do installation again.

@@ -19,7 +19,9 @@ function Footer() {
         <FormattedMessage
           {...messages.authorMessage}
           values={{
-            author: <A href="https://github.com/joshuaalpuerto">Joshua C Alpuerto</A>
+            author: (
+              <A href="https://github.com/joshuaalpuerto">Joshua C Alpuerto</A>
+            )
           }}
         />
       </section>

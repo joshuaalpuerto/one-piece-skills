@@ -44,10 +44,12 @@ export const Wrapper = styled.div`
   padding: 0;
   position: relative;
 
-  &:hover ${IdWrapper} {
-    background-color: forestgreen;
-  }
-  &:hover ${Remove} {
-    display: block;
+  &:hover {
+    ${/* sc-custom 'div' */ IdWrapper} {
+      background-color: forestgreen;
+    }
+    ${/* sc-custom 'span' */ Remove} {
+      display: block;
+    }
   }
 `

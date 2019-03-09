@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> Styled <IdWrapper /> should have display color passed 1`] = `
+.c0 {
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+}
+
+<styled__IdWrapper
+  bgColor="#000"
+>
+  <StyledComponent
+    bgColor="#000"
+    forwardedClass={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": undefined,
+        "componentStyle": ComponentStyle {
+          "componentId": "styled__IdWrapper-dngt2t-1",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "background-color:",
+            [Function],
+            ";color:#fff;padding:5px;",
+          ],
+        },
+        "displayName": "styled__IdWrapper",
+        "render": [Function],
+        "styledComponentId": "styled__IdWrapper-dngt2t-1",
+        "target": "div",
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <div
+      className="c0"
+    >
+      Test
+    </div>
+  </StyledComponent>
+</styled__IdWrapper>
+`;

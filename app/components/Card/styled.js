@@ -52,4 +52,12 @@ export const Wrapper = styled.div`
       display: block;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+
+    ${/* sc-custom 'span' */ Remove} {
+      display: block;
+    }
+  }
 `

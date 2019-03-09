@@ -31,17 +31,17 @@ const FormWrapper = styled.form`
   justify-content: space-around;
 
   @media only screen and (max-width: 768px) {
-    ${/* sc-custom 'div' */ InputWrapper} {
+    ${/* sc-custom 'h1' */ InputWrapper} {
       flex: 1 100%;
       margin-bottom: 20px;
     }
 
-    ${/* sc-custom 'div' */ ExperienceWrapper} {
+    ${/* sc-custom 'h2' */ ExperienceWrapper} {
       flex: 1 30%;
       margin: 0 20px 0 0;
     }
 
-    ${/* sc-custom 'div' */ ButtonWrapper} {
+    ${/* sc-custom 'h3' */ ButtonWrapper} {
       flex: 1;
     }
   }

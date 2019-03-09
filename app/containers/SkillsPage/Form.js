@@ -33,7 +33,7 @@ const ButtonWrapper = styled.div`
 /* eslint-disable react/prefer-stateless-function */
 class Form extends React.PureComponent {
   state = {
-    skill: null,
+    name: null,
     experience: null
   }
 
@@ -59,7 +59,7 @@ class Form extends React.PureComponent {
             minLength={4}
             maxLength={255}
             placeholder={intl.formatMessage(messages.inputPlaceholder)}
-            name="skill"
+            name="name"
             onChange={this.onInputChange}
             required
           />

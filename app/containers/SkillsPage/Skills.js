@@ -19,7 +19,7 @@ const EmptySkills = styled.div`
   justify-content: center;
 `
 
-const Empty = () => (
+export const Empty = () => (
   <EmptySkills>
     <FormattedMessage {...messages.emptySkills} />
   </EmptySkills>
@@ -32,7 +32,7 @@ const Skills = ({ skills }) => (
       <Empty />
     ) : (
       skills.map(({ id, name, experience }) => (
-        <Card id={id} heading={name} subheading={experience} />
+        <Card key={id} id={id} heading={name} subheading={experience} />
       ))
     )}
   </SkillsWrapper>

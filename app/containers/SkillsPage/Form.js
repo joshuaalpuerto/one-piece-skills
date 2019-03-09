@@ -48,7 +48,7 @@ const FormWrapper = styled.form`
 `
 
 /* eslint-disable react/prefer-stateless-function */
-class Form extends React.PureComponent {
+export class Form extends React.PureComponent {
   state = {
     name: null,
     experience: null

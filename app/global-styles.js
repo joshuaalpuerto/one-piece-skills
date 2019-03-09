@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -26,6 +26,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
+`
+
+export const InputBorderStyle = css`
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 100;
 `
 
 export default GlobalStyle

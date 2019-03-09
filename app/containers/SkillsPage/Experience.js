@@ -8,7 +8,7 @@ const Experience = ({ id, label, ...props }) => (
 )
 
 Experience.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  id: PropTypes.string,
   label: PropTypes.string
 }
 

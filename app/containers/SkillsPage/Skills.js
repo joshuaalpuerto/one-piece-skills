@@ -10,7 +10,6 @@ import messages from './messages'
 const SkillsWrapper = styled.div`
   background-color: #eee;
   min-height: 10vh;
-  padding: 20px;
 `
 
 const EmptySkills = styled.div`

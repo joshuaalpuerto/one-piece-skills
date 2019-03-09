@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Select from '../index'
 
@@ -11,12 +11,12 @@ describe('<Select />', () => {
   })
 
   it('should render select inside', () => {
-    const renderedComponent = shallow(<Select name="test" />)
+    const renderedComponent = mount(<Select name="test" />)
     expect(renderedComponent.find('select').length).toEqual(1)
   })
 
   it('should render options select inside', () => {
-    const renderedComponent = shallow(
+    const renderedComponent = mount(
       <Select name="test">
         <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
@@ -28,19 +28,15 @@ describe('<Select />', () => {
   })
 
   it('should render value simulate change and should have value', () => {
-    const renderedComponent = shallow(
-      <Select name="test">
-        <option value="volvo" selected>
-          Volvo
-        </option>
+    const renderedComponent = mount(
+      <Select name="test" defaultValue="volvo">
+        <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
         <option value="mercedes">Mercedes</option>
         <option value="audi">Audi</option>
       </Select>
     )
 
-    expect(renderedComponent.find('option[selected]').props().value).toBe(
-      'volvo'
-    )
+    expect(renderedComponent.find('select').instance().value).toBe('volvo')
   })
 })

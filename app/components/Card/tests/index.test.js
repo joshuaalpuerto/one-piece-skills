@@ -14,12 +14,12 @@ describe('<Card />', () => {
       subheading: '1 year'
     }
 
-    it('should be background default #000', () => {
+    it('should be background default #24333C', () => {
       const renderedComponent = mount(<Card {...props} />)
       const instance = renderedComponent.find(IdWrapper)
 
       expect(instance).toMatchSnapshot()
-      expect(instance).toHaveStyleRule('background-color', '#000')
+      expect(instance).toHaveStyleRule('background-color', '#24333C')
     })
 
     it('should have different background color if passes as prop', () => {

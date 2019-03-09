@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> <IdWrapper /> should be background default #000 1`] = `
+exports[`<Card /> <IdWrapper /> should be background default #24333C 1`] = `
 .c1 {
-  background-color: #000;
+  background-color: #24333C;
   color: #fff;
   padding: 5px;
 }
 
 .c2:hover .c0 {
-  background-color: forestgreen;
+  background-color: #1b998e;
 }
 
 <styled__IdWrapper
-  bgColor="#000"
+  bgColor="#24333C"
 >
   <StyledComponent
-    bgColor="#000"
+    bgColor="#24333C"
     forwardedClass={
       Object {
         "$$typeof": Symbol(react.forward_ref),
@@ -57,7 +57,7 @@ exports[`<Card /> <IdWrapper /> should have different background color if passes
 }
 
 .c2:hover .c0 {
-  background-color: forestgreen;
+  background-color: #1b998e;
 }
 
 <styled__IdWrapper

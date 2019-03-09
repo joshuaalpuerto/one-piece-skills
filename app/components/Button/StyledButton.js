@@ -1,9 +1,25 @@
 import styled from 'styled-components'
 
-import buttonStyles from './buttonStyles'
-
 const StyledButton = styled.button`
-  ${buttonStyles};
+  -webkit-font-smoothing: antialiased;
+  background-color: #34495e;
+  border-radius: 5px;
+  border: 1px solid #34495e;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
 `
 
 export default StyledButton

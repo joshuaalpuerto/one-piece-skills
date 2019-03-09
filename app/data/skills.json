@@ -2,61 +2,61 @@
   {
     "id": 123,
     "name": "React",
-    "expirience": "2 years"
+    "experience": "2 years"
   },
   {
     "id": 124,
     "name": "Express.js",
-    "expirience": "4 years"
+    "experience": "4 years"
   },
   {
     "id": 125,
     "name": "GraphQL",
-    "expirience": "< 1 Year"
+    "experience": "< 1 Year"
   },
   {
     "id": 126,
     "name": "React",
-    "expirience": "2 years"
+    "experience": "2 years"
   },
   {
     "id": 127,
     "name": "Express.js",
-    "expirience": "4 years"
+    "experience": "4 years"
   },
   {
     "id": 128,
     "name": "GraphQL",
-    "expirience": "< 1 Year"
+    "experience": "< 1 Year"
   },
   {
     "id": 129,
     "name": "React",
-    "expirience": "2 years"
+    "experience": "2 years"
   },
   {
     "id": 130,
     "name": "Express.js",
-    "expirience": "4 years"
+    "experience": "4 years"
   },
   {
     "id": 131,
     "name": "GraphQL",
-    "expirience": "< 1 Year"
+    "experience": "< 1 Year"
   },
   {
     "id": 132,
     "name": "React",
-    "expirience": "2 years"
+    "experience": "2 years"
   },
   {
     "id": 133,
     "name": "Express.js",
-    "expirience": "4 years"
+    "experience": "4 years"
   },
   {
     "id": 134,
     "name": "GraphQL",
-    "expirience": "< 1 Year"
+    "experience": "< 1 Year"
   }
 ]

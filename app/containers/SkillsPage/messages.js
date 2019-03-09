@@ -18,5 +18,9 @@ export default defineMessages({
   submit: {
     id: `${scope}.submit`,
     defaultMessage: 'ADD SKILLS'
+  },
+  emptySkills: {
+    id: `${scope}.empty`,
+    defaultMessage: 'No skills'
   }
 })

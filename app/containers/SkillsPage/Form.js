@@ -11,23 +11,40 @@ import Experience from './Experience'
 import messages from './messages'
 import { EXPERIENCES } from './constants'
 
+const InputWrapper = styled.div`
+  flex: 1 30%;
+`
+
+const ExperienceWrapper = styled.div`
+  flex: 1 20%;
+  margin: 0px 20px;
+`
+
+const ButtonWrapper = styled.div`
+  flex: 1 15%;
+`
+
 const FormWrapper = styled.form`
   display: flex;
   margin: 20px 0px;
   flex-flow: row wrap;
   justify-content: space-around;
-`
-const InputWrapper = styled.div`
-  flex: 1 40%;
-`
 
-const ExperienceWrapper = styled.div`
-  flex: 1 30%;
-  margin: 0px 10px;
-`
+  @media only screen and (max-width: 768px) {
+    ${/* sc-custom 'div' */ InputWrapper} {
+      flex: 1 100%;
+      margin-bottom: 20px;
+    }
 
-const ButtonWrapper = styled.div`
-  flex: 1 25%;
+    ${/* sc-custom 'div' */ ExperienceWrapper} {
+      flex: 1 30%;
+      margin: 0 20px 0 0;
+    }
+
+    ${/* sc-custom 'div' */ ButtonWrapper} {
+      flex: 1;
+    }
+  }
 `
 
 /* eslint-disable react/prefer-stateless-function */

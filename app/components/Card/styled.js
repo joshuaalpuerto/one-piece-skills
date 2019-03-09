@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
 
   &:hover {
     ${/* sc-custom 'div' */ IdWrapper} {
-      background-color: forestgreen;
+      background-color: #1b998e;
     }
     ${/* sc-custom 'span' */ Remove} {
       display: block;

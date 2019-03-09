@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Input from '../index'
 
@@ -11,7 +11,7 @@ describe('<Input />', () => {
   })
 
   it('should render input inside', () => {
-    const renderedComponent = shallow(<Input name="test" />)
+    const renderedComponent = mount(<Input name="test" />)
     expect(renderedComponent.find('input').length).toEqual(1)
   })
 })

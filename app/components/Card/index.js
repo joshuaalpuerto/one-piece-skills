@@ -20,7 +20,7 @@ function Card({ id, color, heading, subheading, renderDelete }) {
 }
 
 Card.defaultProps = {
-  color: '#24333C',
+  color: '#80878B',
   renderDelete: null
 }
 

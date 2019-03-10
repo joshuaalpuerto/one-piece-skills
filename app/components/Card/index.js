@@ -2,6 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IdWrapper, ContentWrapper, Remove, Wrapper } from './styled'
 
+/**
+ * Make renderDelete available for them to customize or not to provide just for display
+ * @param {*} param0
+ */
 function Card({ id, color, heading, subheading, renderDelete }) {
   return (
     <Wrapper>

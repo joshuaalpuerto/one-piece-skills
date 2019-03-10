@@ -1,5 +1,5 @@
-import { takeLatest, call, put, all, fork, select } from 'redux-saga/effects'
-import { concat, compose, isEmpty, when } from 'ramda'
+import { takeLatest, call, put, fork, select } from 'redux-saga/effects'
+import { concat, compose } from 'ramda'
 
 import request from 'utils/request'
 
@@ -9,21 +9,23 @@ import { GET_SKILLS, CREATE_SKILLS } from './constants'
 import { resultSkills } from './actions'
 import { selectSkills } from './selectors'
 
+export const getResult = compose(
+  put,
+  resultSkills
+)
+
+export const updateSkills = skills => skill => concat(skills, [skill])
+
 export function* getSkills() {
   try {
     const req = yield call(request, `${API_BASE_URL}/skills`, {
       method: 'GET'
     })
 
-    const results = compose(
-      put,
-      resultSkills,
-      when(isEmpty, [])
-    )
-    yield results(req)
+    yield getResult(req)
   } catch (error) {
     const response = yield error.response.json()
-    yield put(resultSkills(new Error(response.error)))
+    yield getResult(new Error(response.error))
   }
 }
 
@@ -38,13 +40,8 @@ export function* createSkills(args) {
       }
     })
     const skills = yield select(selectSkills())
-    const results = compose(
-      put,
-      resultSkills,
-      when(isEmpty, []),
-      concat(skills.toJS())
-    )
-    yield results([req])
+    const modified = updateSkills(skills.toJS())(req)
+    yield getResult(modified)
   } catch (error) {
     const response = yield error.response.json()
     yield put(resultSkills(new Error(response.error)))
@@ -61,7 +58,7 @@ export function* createSkillsSaga() {
 
 // All sagas to be loaded
 export function* skillsPageSaga() {
-  yield all([fork(getSkillsSaga), fork(createSkillsSaga)])
+  yield [fork(getSkillsSaga), fork(createSkillsSaga)]
 }
 
 // All sagas to be loaded

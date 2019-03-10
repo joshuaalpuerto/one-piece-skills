@@ -27,8 +27,10 @@ Make sure you have `nvm`, node `v8 and up` installed before proceeding with the 
 
 1.  Clone repo - `https://github.com/joshuaalpuerto/one-piece-skills.git`
 2.  Create `.env` using `.env-sample` as template.
-3.  Run `npm install` to install dependencies and clean the git repo.
-4.  Run `npm start` to see the app at `http://localhost:3000`.
+3.  Configure `.env` credentials/informations ask **ADMIN** where to find.
+4.  Run `npm install` to install dependencies and clean the git repo.
+5.  Run `npm start` to see the app at `http://localhost:3000`.
+6.  Run `npm run api` to see the api at `http://localhost:4000/skills`.
 
 To build and test production build:
 
@@ -97,7 +99,6 @@ This boilerplate uses [styled-components](https://github.com/styled-components/s
 The app bundles all your clients-side scripts and chunk them into several files using
 code splitting where possible. Your code is automatically optimized when
 building for production so you don't have to worry about that.
-
 
 ### SEO
 

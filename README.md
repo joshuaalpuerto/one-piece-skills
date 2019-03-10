@@ -160,3 +160,5 @@ Adding `pre-commit` to your project can be helpful to encourage consistency and 
 - Apply edit for skills
 - Validation of skills if it is already added.
 - Add E2E to ensure app is working giving more confidence.
+- Make if offline(PWA) ready.
+- Make it cross-browser (Tested only in **CHROME**)

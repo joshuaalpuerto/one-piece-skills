@@ -2,14 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IdWrapper, ContentWrapper, Remove, Wrapper } from './styled'
 
+const DEFAULT_COLOR = '#80878B'
 /**
  * Make renderDelete available for them to customize or not to provide just for display
  * @param {*} param0
  */
 function Card({ id, color, heading, subheading, renderDelete }) {
+  const bgColor = color || DEFAULT_COLOR
   return (
     <Wrapper>
-      <IdWrapper bgColor={color}>{id}</IdWrapper>
+      <IdWrapper bgColor={bgColor}>{id}</IdWrapper>
       <ContentWrapper>
         {heading}
         {subheading && <span> {subheading} </span>}
@@ -20,7 +22,7 @@ function Card({ id, color, heading, subheading, renderDelete }) {
 }
 
 Card.defaultProps = {
-  color: '#80878B',
+  color: DEFAULT_COLOR,
   renderDelete: null
 }
 

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> <IdWrapper /> should be background default #24333C 1`] = `
+exports[`<Card /> <IdWrapper /> should be background default #80878B 1`] = `
 .c1 {
-  background-color: #24333C;
+  background-color: #80878B;
   color: #fff;
   padding: 5px;
 }
@@ -12,10 +12,10 @@ exports[`<Card /> <IdWrapper /> should be background default #24333C 1`] = `
 }
 
 <styled__IdWrapper
-  bgColor="#24333C"
+  bgColor="#80878B"
 >
   <StyledComponent
-    bgColor="#24333C"
+    bgColor="#80878B"
     forwardedClass={
       Object {
         "$$typeof": Symbol(react.forward_ref),

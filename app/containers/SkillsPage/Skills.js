@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
 import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
+import { always, gt, ifElse } from 'ramda'
 
 import { toJS } from 'utils/Immutable'
 import Card from 'components/Card'
@@ -26,19 +27,20 @@ export const Empty = () => (
     <FormattedMessage {...messages.emptySkills} />
   </EmptySkills>
 )
-
+const colorIdentifier = ifElse(gt(5), always('#24333C'), always(null))
 /* eslint-disable react/prefer-stateless-function */
 const Skills = ({ skills, onDelete }) => (
   <SkillsWrapper>
     {skills.length === 0 ? (
       <Empty />
     ) : (
-      skills.map(({ id, name, experience }) => (
+      skills.map(({ id, name, experience }, idx) => (
         <Card
           key={id}
           id={id}
           heading={name}
           subheading={experience}
+          color={colorIdentifier(idx)}
           renderDelete={() => <DeleteButton onClick={() => onDelete(id)} />}
         />
       ))

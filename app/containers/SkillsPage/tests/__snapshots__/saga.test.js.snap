@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [FAIL] should request call to API 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/CREATE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [FAIL] should request call to API 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "undefined/skills",
+      Object {
+        "body": "{\\"name\\":\\"React\\",\\"experience\\":\\"<1 year\\"}",
+        "headers": Object {
+          "Content-Type": "application/json",
+        },
+        "method": "POST",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [FAIL] should throw error resultSkills 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/CREATE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [SUCCESS] should get skills from selector 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/CREATE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [SUCCESS] should request call to API 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/CREATE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [SUCCESS] should request call to API 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "undefined/skills",
+      Object {
+        "body": "{\\"name\\":\\"React\\",\\"experience\\":\\"<1 year\\"}",
+        "headers": Object {
+          "Content-Type": "application/json",
+        },
+        "method": "POST",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga createSkillsSaga createSkills [SUCCESS] should return updated skill list 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/CREATE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [FAIL] should request call to API 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/DELETE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [FAIL] should request call to API 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "undefined/skills/[object Object]",
+      Object {
+        "method": "DELETE",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [FAIL] should throw error resultSkills 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/DELETE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [SUCCESS] should get skills from selector 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/DELETE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [SUCCESS] should request call to API 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/DELETE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [SUCCESS] should request call to API 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "undefined/skills/[object Object]",
+      Object {
+        "method": "DELETE",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga deleteSkillsSaga deleteSkills [SUCCESS] should return updated skill list 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/DELETE_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga getSkillsSaga getSkills [FAIL] should request call to API 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/GET_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga getSkillsSaga getSkills [FAIL] should request call to API 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "undefined/skills",
+      Object {
+        "method": "GET",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga getSkillsSaga getSkills [FAIL] should throw error resultSkills 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/GET_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga getSkillsSaga getSkills [SUCCESS] should request call to API 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/GET_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga getSkillsSaga getSkills [SUCCESS] should request call to API 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "undefined/skills",
+      Object {
+        "method": "GET",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`SkillsPage Saga getSkillsSaga getSkills [SUCCESS] should set resultRegistration 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "FORK": Object {
+    "args": Array [
+      "app/SkillsPage/GET_SKILLS",
+      [Function],
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;

@@ -8,10 +8,12 @@ const StyledButton = styled.button`
   box-sizing: border-box;
   color: #fff;
   display: inline-block;
+  font-weight: 500;
   padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  width: 100%;
 
   &:hover {
     opacity: 0.8;

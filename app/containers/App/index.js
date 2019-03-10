@@ -13,7 +13,6 @@ import { Switch, Route } from 'react-router-dom'
 
 import NotFoundPage from 'containers/NotFoundPage/Loadable'
 import SkillsPage from 'containers/SkillsPage/Loadable'
-import Header from 'components/Header'
 import Footer from 'components/Footer'
 
 import GlobalStyle from '../../global-styles'
@@ -36,7 +35,6 @@ export default function App() {
       >
         <meta name="description" content="A One piece skills application" />
       </Helmet>
-      <Header />
       <Switch>
         <Route exact path="/" component={SkillsPage} />
         <Route path="" component={NotFoundPage} />

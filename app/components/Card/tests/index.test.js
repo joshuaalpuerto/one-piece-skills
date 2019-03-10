@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 
 import 'jest-styled-components'
 
-import Card from '../index'
+import Card, { DEFAULT_COLOR } from '../index'
 import { IdWrapper, ContentWrapper, Remove } from '../styled'
 
 describe('<Card />', () => {
@@ -19,7 +19,7 @@ describe('<Card />', () => {
       const instance = renderedComponent.find(IdWrapper)
 
       expect(instance).toMatchSnapshot()
-      expect(instance).toHaveStyleRule('background-color', '#80878B')
+      expect(instance).toHaveStyleRule('background-color', DEFAULT_COLOR)
     })
 
     it('should have different background color if passes as prop', () => {

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IdWrapper, ContentWrapper, Remove, Wrapper } from './styled'
 
-const DEFAULT_COLOR = '#80878B'
+export const DEFAULT_COLOR = '#80878B'
 /**
  * Make renderDelete available for them to customize or not to provide just for display
  * @param {*} param0

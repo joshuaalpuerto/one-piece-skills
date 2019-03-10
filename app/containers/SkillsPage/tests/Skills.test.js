@@ -7,7 +7,6 @@ import Skills, { Empty } from '../Skills'
 const wrapper = (props = {}, enzyme = shallow) => enzyme(<Skills {...props} />)
 
 describe('<Skills />', () => {
-  // Please check https://github.com/ag-grid/ag-grid-react for props
   const minProps = {
     skills: []
   }

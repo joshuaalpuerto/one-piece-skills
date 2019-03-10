@@ -1,10 +1,11 @@
+export const noop = () => {}
 export const INTL_SHAPE = {
-  formatDate: () => {},
-  formatTime: () => {},
-  formatRelative: () => {},
-  formatNumber: () => {},
-  formatPlural: () => {},
-  formatMessage: () => {},
-  formatHTMLMessage: () => {},
-  now: () => {}
+  formatDate: noop,
+  formatTime: noop,
+  formatRelative: noop,
+  formatNumber: noop,
+  formatPlural: noop,
+  formatMessage: noop,
+  formatHTMLMessage: noop,
+  now: noop
 }

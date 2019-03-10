@@ -144,3 +144,19 @@ Adding `pre-commit` to your project can be helpful to encourage consistency and 
 - [lint-staged](https://github.com/okonet/lint-staged) - Linting makes more sense when running before committing your code. By doing that you can ensure no errors are going into repository and enforce code style. But running a lint process on a whole project is slow and linting results can be irrelevant. Ultimately you only want to lint files that will be committed.
 
 > If `pre-commit` isn't triggering it means you install the package with out having `.git` instance. You need to remove `node_modules` and do installation again.
+
+### FAQ
+
+1. How long did it take you to finish it?
+
+- 16 hrs
+
+2. What would you have done if time permitted?
+
+- React lazy and react suspense
+- React memo for much faster loading
+- Remove warning both dev and testing
+- Remove immutable use instead immer
+- Apply edit for skills
+- Validation of skills if it is already added.
+- Add E2E to ensure app is working giving more confidence.

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import { toJS } from 'utils/Immutable'
 import Card from 'components/Card'
+import { DeleteButton } from 'components/Card/styled'
 
 import messages from './messages'
 
@@ -27,20 +28,27 @@ export const Empty = () => (
 )
 
 /* eslint-disable react/prefer-stateless-function */
-const Skills = ({ skills }) => (
+const Skills = ({ skills, onDelete }) => (
   <SkillsWrapper>
     {skills.length === 0 ? (
       <Empty />
     ) : (
       skills.map(({ id, name, experience }) => (
-        <Card key={id} id={id} heading={name} subheading={experience} />
+        <Card
+          key={id}
+          id={id}
+          heading={name}
+          subheading={experience}
+          renderDelete={() => <DeleteButton onClick={() => onDelete(id)} />}
+        />
       ))
     )}
   </SkillsWrapper>
 )
 
 Skills.propTypes = {
-  skills: PropTypes.array
+  skills: PropTypes.array,
+  onDelete: PropTypes.func
 }
 
 /**

@@ -8,7 +8,9 @@ import skillsPageSaga, {
   getSkills,
   getResult,
   createSkillsSaga,
-  createSkills
+  createSkills,
+  deleteSkillsSaga,
+  deleteSkills
 } from '../saga'
 
 const skill = {
@@ -119,12 +121,65 @@ describe('SkillsPage Saga', () => {
     })
   })
 
+  describe('deleteSkillsSaga', () => {
+    beforeEach(() => {
+      const generator = deleteSkillsSaga()
+      const latest = generator.next().value
+      expect(latest).toMatchSnapshot()
+    })
+
+    describe('deleteSkills [SUCCESS]', () => {
+      const generator = deleteSkills(args)
+
+      it('should request call to API', () => {
+        const call = generator.next().value
+        expect(call).toMatchSnapshot()
+      })
+
+      it('should get skills from selector', () => {
+        const selector = generator.next().value
+
+        expect(JSON.stringify(selector)).toEqual(
+          JSON.stringify(select(selectSkills()))
+        )
+      })
+
+      it('should return updated skill list', () => {
+        const skills = fromJS([])
+        const result = generator.next(skills).value
+        expect(result).toEqual(getResult([]))
+      })
+    })
+
+    describe('deleteSkills [FAIL]', () => {
+      const generator = deleteSkills(args)
+
+      it('should request call to API', () => {
+        const call = generator.next().value
+        expect(call).toMatchSnapshot()
+      })
+
+      it('should throw error resultSkills', () => {
+        const error = new Error()
+        const response = {
+          response: {
+            json() {}
+          }
+        }
+        // eslint-disable-next-line no-unused-vars
+        const throwAction = generator.throw(response).value
+        const callAction = generator.next(response).value
+        expect(callAction).toEqual(put(resultSkills(error)))
+      })
+    })
+  })
+
   describe('defaultGenerators', () => {
     const generators = skillsPageSaga()
 
-    it('should have 2 watchers', () => {
+    it('should have 3 watchers', () => {
       const watchers = generators.next().value
-      expect(watchers.length).toEqual(2)
+      expect(watchers.length).toEqual(3)
     })
   })
 })

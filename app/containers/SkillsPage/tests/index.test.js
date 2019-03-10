@@ -11,7 +11,7 @@ import LoadingIndicator from 'components/LoadingIndicator'
 import Form from '../Form'
 import Skills from '../Skills'
 import { SkillsPage, mapDispatchToProps } from '../index'
-import { getSkills, createSkills } from '../actions'
+import { getSkills, createSkills, deleteSkills } from '../actions'
 
 const wrapper = (props = {}, enzyme = shallow) =>
   enzyme(<SkillsPage {...props} />)
@@ -20,6 +20,7 @@ describe('<SkillsPage />', () => {
   const minProps = {
     getSkills: () => {},
     createSkills: () => {},
+    deleteSkills: () => {},
     skills: fromJS({}),
     skillsLoader: false
   }
@@ -71,6 +72,19 @@ describe('<SkillsPage />', () => {
     })
   })
 
+  describe('onDelete', () => {
+    it('should trigger deleteSkills on mount', () => {
+      const props = {
+        ...minProps,
+        deleteSkills: jest.fn()
+      }
+      const renderComponent = wrapper(props)
+      const component = renderComponent.instance()
+      component.onDelete()
+      expect(component.props.deleteSkills).toBeCalled()
+    })
+  })
+
   describe('getSkills', () => {
     it('should be injected', () => {
       const dispatch = jest.fn()
@@ -100,6 +114,22 @@ describe('<SkillsPage />', () => {
       const payload = {}
       result.createSkills(payload)
       expect(dispatch).toHaveBeenCalledWith(createSkills(payload))
+    })
+  })
+
+  describe('deleteSkills', () => {
+    it('should be injected', () => {
+      const dispatch = jest.fn()
+      const result = mapDispatchToProps(dispatch)
+      expect(result.deleteSkills).toBeDefined()
+    })
+
+    it('should dispatch deleteSkills when called', () => {
+      const dispatch = jest.fn()
+      const result = mapDispatchToProps(dispatch)
+      const payload = {}
+      result.deleteSkills(payload)
+      expect(dispatch).toHaveBeenCalledWith(deleteSkills(payload))
     })
   })
 })

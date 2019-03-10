@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable'
 import skillsPageReducer from '../reducer'
-import { getSkills, createSkills, resultSkills } from '../actions'
+import { getSkills, createSkills, deleteSkills, resultSkills } from '../actions'
 
 describe('skillsPageReducer', () => {
   let state
@@ -27,7 +27,7 @@ describe('skillsPageReducer', () => {
     expect(skillsPageReducer(state, getSkills())).toEqual(expectedResult)
   })
 
-  it('Should load and reset success and error state when getting skills', () => {
+  it('Should load and reset success and error state on creation', () => {
     const expectedResult = state
       .set('skillsLoader', true)
       .set('skillsSuccess', false)
@@ -39,14 +39,14 @@ describe('skillsPageReducer', () => {
     )
   })
 
-  it('Should load and reset success and error state on creation', () => {
+  it('Should load and reset success and error state on deletion', () => {
     const expectedResult = state
       .set('skillsLoader', true)
       .set('skillsSuccess', false)
       .set('skillsError', false)
 
-    const payload = { name: 'React', experience: 1 }
-    expect(skillsPageReducer(state, createSkills(payload))).toEqual(
+    const payload = 1
+    expect(skillsPageReducer(state, deleteSkills(payload))).toEqual(
       expectedResult
     )
   })

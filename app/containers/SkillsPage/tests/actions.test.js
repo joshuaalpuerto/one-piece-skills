@@ -1,6 +1,11 @@
-import { getSkills, createSkills, resultSkills } from '../actions'
+import { getSkills, createSkills, deleteSkills, resultSkills } from '../actions'
 
-import { GET_SKILLS, CREATE_SKILLS, RESULT_SKILLS } from '../constants'
+import {
+  GET_SKILLS,
+  CREATE_SKILLS,
+  DELETE_SKILLS,
+  RESULT_SKILLS
+} from '../constants'
 
 describe('Skills Page Actions', () => {
   it('It should getSkills', () => {
@@ -19,6 +24,15 @@ describe('Skills Page Actions', () => {
       payload
     }
     expect(createSkills(payload)).toEqual(expected)
+  })
+
+  it('should set deleteSkills', () => {
+    const payload = 1
+    const expected = {
+      type: DELETE_SKILLS,
+      payload
+    }
+    expect(deleteSkills(payload)).toEqual(expected)
   })
 
   it('should set resultSkills', () => {

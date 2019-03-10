@@ -49,9 +49,15 @@ const FormWrapper = styled.form`
 
 /* eslint-disable react/prefer-stateless-function */
 export class Form extends React.PureComponent {
-  state = {
-    name: null,
-    experience: null
+  initialState = {
+    name: '',
+    experience: ''
+  }
+
+  constructor() {
+    super()
+
+    this.state = this.initialState
   }
 
   onInputChange = evt => {
@@ -63,11 +69,17 @@ export class Form extends React.PureComponent {
 
   onSubmit = evt => {
     evt.preventDefault()
+    // reset form
+    this.setState({
+      ...this.initialState
+    })
+
     this.props.onSubmit(this.state)
   }
 
   render() {
     const { intl } = this.props
+    const { name, experience } = this.state
 
     return (
       <FormWrapper onSubmit={this.onSubmit}>
@@ -75,8 +87,10 @@ export class Form extends React.PureComponent {
           <Input
             minLength={4}
             maxLength={255}
+            dv
             placeholder={intl.formatMessage(messages.inputPlaceholder)}
             name="name"
+            value={name}
             onChange={this.onInputChange}
             required
           />
@@ -85,7 +99,7 @@ export class Form extends React.PureComponent {
           <Select
             name="experience"
             onChange={this.onInputChange}
-            defaultValue=""
+            value={experience}
             required
           >
             <Experience

@@ -14,6 +14,14 @@ describe('<Card />', () => {
       subheading: '1 year'
     }
 
+    it('should have default bgColor even null values submitted', () => {
+      const renderedComponent = mount(<Card {...{ ...props, color: null }} />)
+      const instance = renderedComponent.find(IdWrapper)
+
+      expect(instance).toMatchSnapshot()
+      expect(instance).toHaveStyleRule('background-color', DEFAULT_COLOR)
+    })
+
     it('should be background default #80878B', () => {
       const renderedComponent = mount(<Card {...props} />)
       const instance = renderedComponent.find(IdWrapper)

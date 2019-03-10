@@ -18,7 +18,7 @@ import reducer from './reducer'
 import saga from './saga'
 import messages from './messages'
 
-import { getSkills, createSkills } from './actions'
+import { getSkills, createSkills, deleteSkills } from './actions'
 import { selectSkills, selectSkillsLoader } from './selectors'
 
 const Wrapper = styled.section`
@@ -35,6 +35,10 @@ export class SkillsPage extends React.PureComponent {
     this.props.createSkills(values)
   }
 
+  onDelete = id => {
+    this.props.deleteSkills(id)
+  }
+
   render() {
     const { skills, skillsLoader } = this.props
     return (
@@ -47,7 +51,11 @@ export class SkillsPage extends React.PureComponent {
           <FormattedMessage {...messages.header} />
         </H3>
         <Form onSubmit={this.onSubmit} />
-        {skillsLoader ? <LoadingIndicator /> : <Skills skills={skills} />}
+        {skillsLoader ? (
+          <LoadingIndicator />
+        ) : (
+          <Skills skills={skills} onDelete={this.onDelete} />
+        )}
       </Wrapper>
     )
   }
@@ -56,6 +64,7 @@ export class SkillsPage extends React.PureComponent {
 SkillsPage.propTypes = {
   getSkills: PropTypes.func.isRequired,
   createSkills: PropTypes.func.isRequired,
+  deleteSkills: PropTypes.func.isRequired,
   skills: PropTypes.object.isRequired,
   skillsLoader: PropTypes.bool.isRequired
 }
@@ -69,6 +78,7 @@ export function mapDispatchToProps(dispatch) {
   return {
     getSkills: payload => dispatch(getSkills(payload)),
     createSkills: payload => dispatch(createSkills(payload)),
+    deleteSkills: payload => dispatch(deleteSkills(payload)),
     dispatch
   }
 }

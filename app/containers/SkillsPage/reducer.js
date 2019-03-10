@@ -1,6 +1,11 @@
 import { fromJS } from 'immutable'
 import { handleActions } from 'redux-actions'
-import { GET_SKILLS, CREATE_SKILLS, RESULT_SKILLS } from './constants'
+import {
+  GET_SKILLS,
+  CREATE_SKILLS,
+  DELETE_SKILLS,
+  RESULT_SKILLS
+} from './constants'
 
 export const initialState = fromJS({
   skills: [],
@@ -18,6 +23,12 @@ const skillsPageReducer = handleActions(
         .set('skillsError', false),
 
     [CREATE_SKILLS]: state =>
+      state
+        .set('skillsLoader', true)
+        .set('skillsSuccess', false)
+        .set('skillsError', false),
+
+    [DELETE_SKILLS]: state =>
       state
         .set('skillsLoader', true)
         .set('skillsSuccess', false)
